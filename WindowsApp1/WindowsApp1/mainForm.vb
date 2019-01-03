@@ -35,7 +35,7 @@ Public Class mainForm
             'check roles/authentication
             If count = 1 Then
                 If userRole = "user" Then
-
+                    questionForm.userIdLabel.Text = getId
                     Hide()
                     questionForm.Show()
                 Else
@@ -44,9 +44,6 @@ Public Class mainForm
             Else
                 MessageBox.Show("Incorrect username/password.")
             End If
-
-            Dim form As New questionForm
-            form.UserId = getId
 
         Catch ex As Exception
             MessageBox.Show(ex.Message)

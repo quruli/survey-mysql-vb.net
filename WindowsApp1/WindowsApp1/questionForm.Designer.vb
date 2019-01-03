@@ -31,6 +31,7 @@ Partial Class questionForm
         Me.surveyListBox = New System.Windows.Forms.ListBox()
         Me.yesBtn = New System.Windows.Forms.Button()
         Me.noBtn = New System.Windows.Forms.Button()
+        Me.userIdLabel = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'question_textbox
@@ -120,11 +121,21 @@ Partial Class questionForm
         Me.noBtn.Text = "No"
         Me.noBtn.UseVisualStyleBackColor = True
         '
+        'userIdLabel
+        '
+        Me.userIdLabel.AutoSize = True
+        Me.userIdLabel.Location = New System.Drawing.Point(8, 8)
+        Me.userIdLabel.Name = "userIdLabel"
+        Me.userIdLabel.Size = New System.Drawing.Size(39, 13)
+        Me.userIdLabel.TabIndex = 31
+        Me.userIdLabel.Text = "User #"
+        '
         'questionForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(466, 409)
+        Me.Controls.Add(Me.userIdLabel)
         Me.Controls.Add(Me.noBtn)
         Me.Controls.Add(Me.yesBtn)
         Me.Controls.Add(Me.surveyListBox)
@@ -149,4 +160,5 @@ Partial Class questionForm
     Friend WithEvents surveyListBox As ListBox
     Friend WithEvents yesBtn As Button
     Friend WithEvents noBtn As Button
+    Friend WithEvents userIdLabel As Label
 End Class

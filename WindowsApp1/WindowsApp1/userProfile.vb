@@ -3,6 +3,7 @@
 Public Class userProfile
     Dim cmd As MySqlCommand
     Dim conn As MySqlConnection
+    Dim getId As Integer
 
     'log out
     'show mainForm
@@ -16,6 +17,11 @@ Public Class userProfile
         conn = New MySqlConnection
         conn.ConnectionString = "server=localhost;userid=root;password=;database=survey"
         conn.Open()
+
+        'cast string to int for query
+        getId = Convert.ToInt32(userIdTextBox.Text)
+
+
 
     End Sub
 

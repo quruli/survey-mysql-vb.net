@@ -32,7 +32,6 @@ C:\Users\HP\Documents\GitHub\survey-mysql-vb.net\WindowsApp1\WindowsApp1\obj\Deb
 C:\Users\HP\Documents\GitHub\survey-mysql-vb.net\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.adminFormResponseView.resources
 C:\Users\HP\Documents\GitHub\survey-mysql-vb.net\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.adminView.resources
 C:\Users\HP\Documents\GitHub\survey-mysql-vb.net\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.mainForm.resources
-C:\Users\HP\Documents\GitHub\survey-mysql-vb.net\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.userViewForm.resources
 C:\Users\HP\Documents\GitHub\survey-mysql-vb.net\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.registerForm.resources
 C:\Users\HP\Documents\GitHub\survey-mysql-vb.net\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.Resources.resources
 C:\Users\HP\Documents\GitHub\survey-mysql-vb.net\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.questionForm.resources
@@ -42,3 +41,4 @@ C:\Users\HP\Documents\GitHub\survey-mysql-vb.net\WindowsApp1\WindowsApp1\obj\Deb
 C:\Users\HP\Documents\GitHub\survey-mysql-vb.net\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.exe
 C:\Users\HP\Documents\GitHub\survey-mysql-vb.net\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.xml
 C:\Users\HP\Documents\GitHub\survey-mysql-vb.net\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.pdb
+C:\Users\HP\Documents\GitHub\survey-mysql-vb.net\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.userProfile.resources

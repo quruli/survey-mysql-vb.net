@@ -7,9 +7,6 @@ Public Class questionForm
     Dim connString As String
     Dim read As MySqlDataReader
 
-    Public Property SurveyId As Integer
-    Public Property UserId As Integer
-
     Private Sub questionForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         connString = "server=localhost;userid=root;password=;database=survey"
         conn = New MySqlConnection
@@ -20,7 +17,6 @@ Public Class questionForm
 
         'displays list of surveys
         Try
-            MessageBox.Show(UserId)
             cmd = New MySqlCommand(query, conn)
             read = cmd.ExecuteReader()
             surveyListBox.Items.Clear()
@@ -62,14 +58,17 @@ Public Class questionForm
 
     End Sub
 
-    Private Sub getUserId()
-
-    End Sub
-
     Private Sub logout_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles logout.LinkClicked
         conn.Dispose()
         conn.Close()
         Hide()
         mainForm.Show()
+    End Sub
+
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        Hide()
+        'pass userId to userProfile userId Textbox
+        userProfile.userIdTextBox.Text = userIdLabel.Text
+        userProfile.Show()
     End Sub
 End Class

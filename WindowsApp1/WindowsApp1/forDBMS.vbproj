@@ -94,17 +94,17 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Class1.vb" />
+    <Compile Include="userProfile.Designer.vb">
+      <DependentUpon>userProfile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="userProfile.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="mainForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="mainForm.Designer.vb">
       <DependentUpon>mainForm.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="surveyForm.Designer.vb">
-      <DependentUpon>surveyForm.vb</DependentUpon>
-    </Compile>
-    <Compile Include="surveyForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="registerForm.Designer.vb">
@@ -148,9 +148,6 @@
     <EmbeddedResource Include="mainForm.resx">
       <DependentUpon>mainForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="surveyForm.resx">
-      <DependentUpon>surveyForm.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="registerForm.resx">
       <DependentUpon>registerForm.vb</DependentUpon>
     </EmbeddedResource>
@@ -162,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="questionForm.resx">
       <DependentUpon>questionForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userProfile.resx">
+      <DependentUpon>userProfile.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
