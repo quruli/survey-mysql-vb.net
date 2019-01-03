@@ -28,6 +28,8 @@ Partial Class adminSurveyView
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.userGrid = New System.Windows.Forms.DataGridView()
+        Me.addBtn = New System.Windows.Forms.Button()
+        Me.loadBtn = New System.Windows.Forms.Button()
         CType(Me.userGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -91,11 +93,33 @@ Partial Class adminSurveyView
         Me.userGrid.Size = New System.Drawing.Size(832, 264)
         Me.userGrid.TabIndex = 27
         '
+        'addBtn
+        '
+        Me.addBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.addBtn.Location = New System.Drawing.Point(488, 360)
+        Me.addBtn.Name = "addBtn"
+        Me.addBtn.Size = New System.Drawing.Size(112, 39)
+        Me.addBtn.TabIndex = 33
+        Me.addBtn.Text = "Add"
+        Me.addBtn.UseVisualStyleBackColor = True
+        '
+        'loadBtn
+        '
+        Me.loadBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.loadBtn.Location = New System.Drawing.Point(608, 360)
+        Me.loadBtn.Name = "loadBtn"
+        Me.loadBtn.Size = New System.Drawing.Size(112, 39)
+        Me.loadBtn.TabIndex = 34
+        Me.loadBtn.Text = "Load"
+        Me.loadBtn.UseVisualStyleBackColor = True
+        '
         'adminSurveyView
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(849, 406)
+        Me.Controls.Add(Me.loadBtn)
+        Me.Controls.Add(Me.addBtn)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.LinkLabel2)
@@ -116,4 +140,6 @@ Partial Class adminSurveyView
     Friend WithEvents LinkLabel1 As LinkLabel
     Friend WithEvents Button1 As Button
     Friend WithEvents userGrid As DataGridView
+    Friend WithEvents addBtn As Button
+    Friend WithEvents loadBtn As Button
 End Class
