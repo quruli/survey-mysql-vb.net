@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class adminFormResponseView
+Partial Class adminSurveyView
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -37,9 +37,9 @@ Partial Class adminFormResponseView
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(352, 40)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(129, 25)
-        Me.Label2.TabIndex = 26
-        Me.Label2.Text = "Responses"
+        Me.Label2.Size = New System.Drawing.Size(130, 25)
+        Me.Label2.TabIndex = 32
+        Me.Label2.Text = "Survey List"
         '
         'Label1
         '
@@ -48,7 +48,7 @@ Partial Class adminFormResponseView
         Me.Label1.Location = New System.Drawing.Point(760, 16)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(14, 20)
-        Me.Label1.TabIndex = 25
+        Me.Label1.TabIndex = 31
         Me.Label1.Text = "|"
         '
         'LinkLabel2
@@ -58,7 +58,7 @@ Partial Class adminFormResponseView
         Me.LinkLabel2.Location = New System.Drawing.Point(776, 16)
         Me.LinkLabel2.Name = "LinkLabel2"
         Me.LinkLabel2.Size = New System.Drawing.Size(65, 20)
-        Me.LinkLabel2.TabIndex = 24
+        Me.LinkLabel2.TabIndex = 30
         Me.LinkLabel2.TabStop = True
         Me.LinkLabel2.Text = "Logout"
         '
@@ -69,7 +69,7 @@ Partial Class adminFormResponseView
         Me.LinkLabel1.Location = New System.Drawing.Point(704, 16)
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.Size = New System.Drawing.Size(56, 20)
-        Me.LinkLabel1.TabIndex = 23
+        Me.LinkLabel1.TabIndex = 29
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "Home"
         '
@@ -79,7 +79,7 @@ Partial Class adminFormResponseView
         Me.Button1.Location = New System.Drawing.Point(728, 360)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(112, 39)
-        Me.Button1.TabIndex = 21
+        Me.Button1.TabIndex = 28
         Me.Button1.Text = "Exit"
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -89,21 +89,21 @@ Partial Class adminFormResponseView
         Me.userGrid.Location = New System.Drawing.Point(8, 80)
         Me.userGrid.Name = "userGrid"
         Me.userGrid.Size = New System.Drawing.Size(832, 264)
-        Me.userGrid.TabIndex = 20
+        Me.userGrid.TabIndex = 27
         '
-        'adminFormResponseView
+        'adminSurveyView
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(849, 408)
+        Me.ClientSize = New System.Drawing.Size(849, 406)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.LinkLabel2)
         Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.userGrid)
-        Me.Name = "adminFormResponseView"
-        Me.Text = "Response List"
+        Me.Name = "adminSurveyView"
+        Me.Text = "adminSurveyView"
         CType(Me.userGrid, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

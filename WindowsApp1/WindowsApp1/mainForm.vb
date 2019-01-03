@@ -40,6 +40,7 @@ Public Class mainForm
                     questionForm.Show()
                 Else
                     adminView.Show()
+                    Hide()
                 End If
             Else
                 MessageBox.Show("Incorrect username/password.")

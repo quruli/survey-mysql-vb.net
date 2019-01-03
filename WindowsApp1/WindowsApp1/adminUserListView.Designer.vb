@@ -25,8 +25,8 @@ Partial Class adminUserListView
         Me.userGrid = New System.Windows.Forms.DataGridView()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
-        Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
+        Me.homeLinkLabel = New System.Windows.Forms.LinkLabel()
+        Me.logoutLinkLabel = New System.Windows.Forms.LinkLabel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         CType(Me.userGrid, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -60,27 +60,27 @@ Partial Class adminUserListView
         Me.Button3.Text = "Update Data"
         Me.Button3.UseVisualStyleBackColor = True
         '
-        'LinkLabel1
+        'homeLinkLabel
         '
-        Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LinkLabel1.Location = New System.Drawing.Point(704, 16)
-        Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(56, 20)
-        Me.LinkLabel1.TabIndex = 16
-        Me.LinkLabel1.TabStop = True
-        Me.LinkLabel1.Text = "Home"
+        Me.homeLinkLabel.AutoSize = True
+        Me.homeLinkLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.homeLinkLabel.Location = New System.Drawing.Point(704, 16)
+        Me.homeLinkLabel.Name = "homeLinkLabel"
+        Me.homeLinkLabel.Size = New System.Drawing.Size(56, 20)
+        Me.homeLinkLabel.TabIndex = 16
+        Me.homeLinkLabel.TabStop = True
+        Me.homeLinkLabel.Text = "Home"
         '
-        'LinkLabel2
+        'logoutLinkLabel
         '
-        Me.LinkLabel2.AutoSize = True
-        Me.LinkLabel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LinkLabel2.Location = New System.Drawing.Point(776, 16)
-        Me.LinkLabel2.Name = "LinkLabel2"
-        Me.LinkLabel2.Size = New System.Drawing.Size(65, 20)
-        Me.LinkLabel2.TabIndex = 17
-        Me.LinkLabel2.TabStop = True
-        Me.LinkLabel2.Text = "Logout"
+        Me.logoutLinkLabel.AutoSize = True
+        Me.logoutLinkLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.logoutLinkLabel.Location = New System.Drawing.Point(776, 16)
+        Me.logoutLinkLabel.Name = "logoutLinkLabel"
+        Me.logoutLinkLabel.Size = New System.Drawing.Size(65, 20)
+        Me.logoutLinkLabel.TabIndex = 17
+        Me.logoutLinkLabel.TabStop = True
+        Me.logoutLinkLabel.Text = "Logout"
         '
         'Label1
         '
@@ -109,8 +109,8 @@ Partial Class adminUserListView
         Me.ClientSize = New System.Drawing.Size(848, 411)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.LinkLabel2)
-        Me.Controls.Add(Me.LinkLabel1)
+        Me.Controls.Add(Me.logoutLinkLabel)
+        Me.Controls.Add(Me.homeLinkLabel)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.userGrid)
@@ -124,8 +124,8 @@ Partial Class adminUserListView
     Friend WithEvents userGrid As DataGridView
     Friend WithEvents Button1 As Button
     Friend WithEvents Button3 As Button
-    Friend WithEvents LinkLabel1 As LinkLabel
-    Friend WithEvents LinkLabel2 As LinkLabel
+    Friend WithEvents homeLinkLabel As LinkLabel
+    Friend WithEvents logoutLinkLabel As LinkLabel
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
 End Class

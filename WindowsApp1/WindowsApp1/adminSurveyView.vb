@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
+Public Class adminSurveyView
 
-Public Class adminUserListView
     Dim connect As MySqlConnection
     Dim cmd As MySqlCommand
     Dim cb As MySqlCommandBuilder
@@ -8,19 +8,8 @@ Public Class adminUserListView
     Dim table As DataTable
     Dim bSource As BindingSource
 
-    Private Sub adminForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Dim view As DataView
+    Private Sub adminSurveyView_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         loadData()
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        loadData()
-        connect.Close()
-    End Sub
-
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        cb = New MySqlCommandBuilder(adapter)
-        adapter.Update(table)
 
     End Sub
 
@@ -31,7 +20,7 @@ Public Class adminUserListView
         connect = New MySqlConnection
         connect.ConnectionString = "server=localhost;userid=root;password=;database=survey"
         connect.Open()
-        Dim query As String = "SELECT username, first_name, last_name from survey.user where role = 'user' "
+        Dim query As String = "SELECT * from survey.survey"
         cmd = New MySqlCommand(query, connect)
         adapter.SelectCommand = cmd
         adapter.Fill(table)
@@ -40,8 +29,18 @@ Public Class adminUserListView
         adapter.Update(table)
     End Sub
 
-    Private Sub homeLinkLabel_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles homeLinkLabel.LinkClicked
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
         Hide()
         adminView.Show()
+    End Sub
+
+    Private Sub LinkLabel2_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel2.LinkClicked
+        connect.Close()
+        Hide()
+        mainForm.Show()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Application.Exit()
     End Sub
 End Class

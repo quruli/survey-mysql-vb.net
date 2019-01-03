@@ -42,3 +42,4 @@ C:\Users\HP\Documents\GitHub\survey-mysql-vb.net\WindowsApp1\WindowsApp1\obj\Deb
 C:\Users\HP\Documents\GitHub\survey-mysql-vb.net\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.xml
 C:\Users\HP\Documents\GitHub\survey-mysql-vb.net\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.pdb
 C:\Users\HP\Documents\GitHub\survey-mysql-vb.net\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.userProfile.resources
+C:\Users\HP\Documents\GitHub\survey-mysql-vb.net\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.adminSurveyView.resources
