@@ -1,73 +1,69 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class questionForm
-    Dim dbConnect As New MySqlConnection("server=localhost;userid=root;password=;database=survey")
-    Dim index As Integer = 0
-    Dim setOptionId As Integer = 0
-    Dim table As New DataTable()
-
+    Dim conn As MySqlConnection
+    Dim cmd As MySqlCommand
+    Dim query As String
+    Dim connString As String
+    Dim read As MySqlDataReader
     Public Property SurveyId As Integer
     Public Property UserId As Integer
 
-    Public Sub showData(position As Integer)
-        Dim cmd As New MySqlCommand(
-            "SELECT     question_text
-            FROM        survey.survey s
-            JOIN        survey.questions q ON s.idsurvey = q.survey_id
-            WHERE       idsurvey = @id
-            ORDER BY    idquestions ASC", dbConnect)
-        cmd.Parameters.Add("@id", MySqlDbType.Int16).Value = SurveyId
-        Dim adapter As New MySqlDataAdapter(cmd)
-        adapter.Fill(table)
-
-        question_textbox.Text = table.Rows(position)(0).ToString()
-    End Sub
-
-    Private Sub nextBtn_Click(sender As Object, e As EventArgs) 
-        'Dim cmd As New MySqlCommand("
-        '    insert into     responses
-        '    (user_iduser, survey_idsurvey, questions_idquestions, options_idoptions)
-        '    VALUES (@userid, @surveyid, @questionid, @optionid)", dbConnect)
-        'cmd.Parameters.Add("@userid", MySqlDbType.Int16).Value = UserId
-        'cmd.Parameters.Add("@surveyid", MySqlDbType.Int16).Value = SurveyId
-        'cmd.Parameters.Add("@questionid", MySqlDbType.Int16).Value = UserId
-
-        'If RadioButton1.Checked = True Then
-        '    setOptionId = 1
-        'ElseIf RadioButton2.Checked = True Then
-        '    setOptionId = 2
-        'ElseIf RadioButton3.Checked = True Then
-        '    setOptionId = 3
-        'ElseIf RadioButton4.Checked = True Then
-        '    setOptionId = 4
-        'ElseIf RadioButton5.Checked = True Then
-        '    setOptionId = 5
-        'ElseIf RadioButton6.Checked = True Then
-        '    setOptionId = 6
-        'End If
-        'While index <= table.Rows.Count()
-        index += 1
-            If index > table.Rows.Count() - 1 Then
-                index = table.Rows.Count() - 1
-            End If
-            showData(index)
-        'End While
-
-        'MessageBox.Show(index)
-    End Sub
-
-    Private Sub prevBtn_Click(sender As Object, e As EventArgs) 
-        index -= 1
-        If index < 0 Then
-            index = 0
-        End If
-
-
-        showData(index)
-    End Sub
-
     Private Sub questionForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'MessageBox.Show(UserId)
-        showData(index)
+        connString = "server=localhost;userid=root;password=;database=survey"
+        conn = New MySqlConnection
+        conn.ConnectionString = connString
+        conn.Open()
+
+        query = "select * from survey.survey"
+
+
+
+        Try
+            cmd = New MySqlCommand(query, conn)
+            read = cmd.ExecuteReader()
+            surveyListBox.Items.Clear()
+
+
+            While (read.Read())
+                surveyListBox.Items.Add(read.GetString("title"))
+            End While
+            read.Close()
+        Catch ex As Exception
+
+            conn.Close()
+        End Try
+
+    End Sub
+
+    Private Sub surveyListBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles surveyListBox.SelectedIndexChanged
+        connString = "server=localhost;userid=root;password=;database=survey"
+        conn = New MySqlConnection
+        conn.ConnectionString = connString
+        conn.Open()
+
+        query = "select * from survey.survey where title='" & surveyListBox.Text & "'"
+
+        Try
+            cmd = New MySqlCommand(query, conn)
+            read = cmd.ExecuteReader()
+            Dim getDesc As String
+            getDesc = ""
+
+            While (read.Read())
+                question_textbox.Text = read.GetString("description")
+            End While
+
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+
+    Private Sub logout_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles logout.LinkClicked
+        conn.Dispose()
+        conn.Close()
+        Hide()
+        mainForm.Show()
     End Sub
 End Class

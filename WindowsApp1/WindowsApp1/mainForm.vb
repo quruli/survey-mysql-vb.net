@@ -34,50 +34,20 @@ Public Class mainForm
             'check roles
             If count = 1 Then
                 If userRole = "user" Then
-                    userViewForm.Show()
+                    questionForm.Show()
                 Else
-                    adminUserListView.Show()
+                    adminView.Show()
                 End If
             End If
 
             Dim form As New questionForm
             form.UserId = getId
 
-            'Dim dbAdapter As New MySqlDataAdapter(dbCommand)
-            ''Dim readData As MySqlDataReader
-            'Dim dbTable As New DataTable()
-
-
-            'dbAdapter.Fill(dbTable)
-            'If dbTable.Rows.Count = 0 Then
-            '    MessageBox.Show("Invalid Username or Password")
-            'Else
-            '    userViewForm.Show()
-            '    Hide()
-            'End If
-
-            ''get id based on username
-            'dbCommand2 = New MySqlCommand("select iduser from user where username = @username", dbConnect)
-            'dbCommand2.Parameters.Add("@username", MySqlDbType.VarChar).Value = username.Text
-
-            'Dim getUserId As Integer
-            'getUserId = Integer.Parse(dbCommand2.ExecuteScalar)
-            'MessageBox.Show(getUserId)
-
-            'Dim form As New questionForm
-            'form.UserId = getUserId
-
-            ''Dim dbAdapter2 As New MySqlDataAdapter(dbCommand2)
-            ''readData = dbCommand2.ExecuteReader
-            ''If readData.Read Then
-            ''    getUserId = readData.GetValue(1)
-            ''End If
-            ''pass value to UserId in questionForm
-
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         Finally
-
+            username.Text = ""
+            password.Text = ""
             conn.Dispose()
         End Try
         conn.Close()

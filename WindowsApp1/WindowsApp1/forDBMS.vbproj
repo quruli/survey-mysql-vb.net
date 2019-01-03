@@ -75,10 +75,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="adminForm.Designer.vb">
-      <DependentUpon>adminForm.vb</DependentUpon>
+    <Compile Include="adminUserListView.Designer.vb">
+      <DependentUpon>adminUserListView.vb</DependentUpon>
     </Compile>
-    <Compile Include="adminForm.vb">
+    <Compile Include="adminUserListView.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="adminFormResponseView.Designer.vb">
@@ -87,13 +87,13 @@
     <Compile Include="adminFormResponseView.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Class1.vb" />
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="adminView.Designer.vb">
+      <DependentUpon>adminView.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form1.vb">
+    <Compile Include="adminView.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Class1.vb" />
     <Compile Include="mainForm.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -128,22 +128,22 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="userViewForm2.Designer.vb">
-      <DependentUpon>userViewForm2.vb</DependentUpon>
+    <Compile Include="questionForm.Designer.vb">
+      <DependentUpon>questionForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="userViewForm2.vb">
+    <Compile Include="questionForm.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="adminForm.resx">
-      <DependentUpon>adminForm.vb</DependentUpon>
+    <EmbeddedResource Include="adminUserListView.resx">
+      <DependentUpon>adminUserListView.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="adminFormResponseView.resx">
       <DependentUpon>adminFormResponseView.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="adminView.resx">
+      <DependentUpon>adminView.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mainForm.resx">
       <DependentUpon>mainForm.vb</DependentUpon>
@@ -160,8 +160,8 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="userViewForm2.resx">
-      <DependentUpon>userViewForm2.vb</DependentUpon>
+    <EmbeddedResource Include="questionForm.resx">
+      <DependentUpon>questionForm.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

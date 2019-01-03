@@ -25,9 +25,10 @@ Partial Class adminView
         Me.welcomeLabel = New System.Windows.Forms.Label()
         Me.userBtn = New System.Windows.Forms.Button()
         Me.surveyBtn = New System.Windows.Forms.Button()
-        Me.logoutLinkLabel = New System.Windows.Forms.LinkLabel()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.responseBtn = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'welcomeLabel
@@ -59,25 +60,6 @@ Partial Class adminView
         Me.surveyBtn.Text = "Surveys"
         Me.surveyBtn.UseVisualStyleBackColor = True
         '
-        'logoutLinkLabel
-        '
-        Me.logoutLinkLabel.AutoSize = True
-        Me.logoutLinkLabel.Location = New System.Drawing.Point(480, 8)
-        Me.logoutLinkLabel.Name = "logoutLinkLabel"
-        Me.logoutLinkLabel.Size = New System.Drawing.Size(40, 13)
-        Me.logoutLinkLabel.TabIndex = 4
-        Me.logoutLinkLabel.TabStop = True
-        Me.logoutLinkLabel.Text = "Logout"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(432, 8)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(35, 13)
-        Me.Label1.TabIndex = 5
-        Me.Label1.Text = "Home"
-        '
         'responseBtn
         '
         Me.responseBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -88,13 +70,45 @@ Partial Class adminView
         Me.responseBtn.Text = "Responses"
         Me.responseBtn.UseVisualStyleBackColor = True
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(440, 8)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(14, 20)
+        Me.Label1.TabIndex = 28
+        Me.Label1.Text = "|"
+        '
+        'LinkLabel2
+        '
+        Me.LinkLabel2.AutoSize = True
+        Me.LinkLabel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLabel2.Location = New System.Drawing.Point(456, 8)
+        Me.LinkLabel2.Name = "LinkLabel2"
+        Me.LinkLabel2.Size = New System.Drawing.Size(65, 20)
+        Me.LinkLabel2.TabIndex = 27
+        Me.LinkLabel2.TabStop = True
+        Me.LinkLabel2.Text = "Logout"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(384, 8)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(56, 20)
+        Me.Label2.TabIndex = 29
+        Me.Label2.Text = "Home"
+        '
         'adminView
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(528, 198)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.logoutLinkLabel)
+        Me.Controls.Add(Me.LinkLabel2)
         Me.Controls.Add(Me.surveyBtn)
         Me.Controls.Add(Me.responseBtn)
         Me.Controls.Add(Me.userBtn)
@@ -109,7 +123,8 @@ Partial Class adminView
     Friend WithEvents welcomeLabel As Label
     Friend WithEvents userBtn As Button
     Friend WithEvents surveyBtn As Button
-    Friend WithEvents logoutLinkLabel As LinkLabel
-    Friend WithEvents Label1 As Label
     Friend WithEvents responseBtn As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents LinkLabel2 As LinkLabel
+    Friend WithEvents Label2 As Label
 End Class
