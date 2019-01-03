@@ -35,7 +35,7 @@ Partial Class adminFormResponseView
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(328, 40)
+        Me.Label2.Location = New System.Drawing.Point(352, 40)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(129, 25)
         Me.Label2.TabIndex = 26
@@ -103,7 +103,7 @@ Partial Class adminFormResponseView
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.userGrid)
         Me.Name = "adminFormResponseView"
-        Me.Text = "adminFormResponseView"
+        Me.Text = "Response List"
         CType(Me.userGrid, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

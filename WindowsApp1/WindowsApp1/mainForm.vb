@@ -36,7 +36,7 @@ Public Class mainForm
                 If userRole = "user" Then
                     userViewForm.Show()
                 Else
-                    adminForm.Show()
+                    adminUserListView.Show()
                 End If
             End If
 

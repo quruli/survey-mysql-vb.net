@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class adminForm
+Partial Class adminUserListView
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -35,7 +35,7 @@ Partial Class adminForm
         'userGrid
         '
         Me.userGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.userGrid.Location = New System.Drawing.Point(8, 72)
+        Me.userGrid.Location = New System.Drawing.Point(8, 80)
         Me.userGrid.Name = "userGrid"
         Me.userGrid.Size = New System.Drawing.Size(832, 264)
         Me.userGrid.TabIndex = 12
@@ -43,7 +43,7 @@ Partial Class adminForm
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(600, 352)
+        Me.Button1.Location = New System.Drawing.Point(600, 360)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(112, 39)
         Me.Button1.TabIndex = 13
@@ -53,7 +53,7 @@ Partial Class adminForm
         'Button3
         '
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(728, 352)
+        Me.Button3.Location = New System.Drawing.Point(728, 360)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(112, 39)
         Me.Button3.TabIndex = 15
@@ -64,7 +64,7 @@ Partial Class adminForm
         '
         Me.LinkLabel1.AutoSize = True
         Me.LinkLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LinkLabel1.Location = New System.Drawing.Point(704, 8)
+        Me.LinkLabel1.Location = New System.Drawing.Point(704, 16)
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.Size = New System.Drawing.Size(56, 20)
         Me.LinkLabel1.TabIndex = 16
@@ -75,7 +75,7 @@ Partial Class adminForm
         '
         Me.LinkLabel2.AutoSize = True
         Me.LinkLabel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LinkLabel2.Location = New System.Drawing.Point(776, 8)
+        Me.LinkLabel2.Location = New System.Drawing.Point(776, 16)
         Me.LinkLabel2.Name = "LinkLabel2"
         Me.LinkLabel2.Size = New System.Drawing.Size(65, 20)
         Me.LinkLabel2.TabIndex = 17
@@ -86,7 +86,7 @@ Partial Class adminForm
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(760, 8)
+        Me.Label1.Location = New System.Drawing.Point(760, 16)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(14, 20)
         Me.Label1.TabIndex = 18
@@ -96,17 +96,17 @@ Partial Class adminForm
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(328, 32)
+        Me.Label2.Location = New System.Drawing.Point(328, 40)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(185, 25)
         Me.Label2.TabIndex = 19
         Me.Label2.Text = "User Information"
         '
-        'adminForm
+        'adminUserListView
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(848, 405)
+        Me.ClientSize = New System.Drawing.Size(848, 411)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.LinkLabel2)
@@ -114,8 +114,8 @@ Partial Class adminForm
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.userGrid)
-        Me.Name = "adminForm"
-        Me.Text = "adminForm"
+        Me.Name = "adminUserListView"
+        Me.Text = "User List"
         CType(Me.userGrid, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

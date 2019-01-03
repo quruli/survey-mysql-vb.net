@@ -23,7 +23,7 @@ Public Class questionForm
         question_textbox.Text = table.Rows(position)(0).ToString()
     End Sub
 
-    Private Sub nextBtn_Click(sender As Object, e As EventArgs) Handles nextBtn.Click
+    Private Sub nextBtn_Click(sender As Object, e As EventArgs) 
         'Dim cmd As New MySqlCommand("
         '    insert into     responses
         '    (user_iduser, survey_idsurvey, questions_idquestions, options_idoptions)
@@ -56,7 +56,7 @@ Public Class questionForm
         'MessageBox.Show(index)
     End Sub
 
-    Private Sub prevBtn_Click(sender As Object, e As EventArgs) Handles prevBtn.Click
+    Private Sub prevBtn_Click(sender As Object, e As EventArgs) 
         index -= 1
         If index < 0 Then
             index = 0

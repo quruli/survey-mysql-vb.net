@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 
-Public Class adminForm
+Public Class adminUserListView
     Dim connect As MySqlConnection
     Dim cmd As MySqlCommand
     Dim cb As MySqlCommandBuilder
