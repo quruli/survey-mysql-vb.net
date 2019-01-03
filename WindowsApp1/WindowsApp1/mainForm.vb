@@ -1,6 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class mainForm
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles loginBtn.Click
         Dim conn As MySqlConnection
         Dim cmd As MySqlCommand
@@ -34,6 +35,8 @@ Public Class mainForm
             'check roles/authentication
             If count = 1 Then
                 If userRole = "user" Then
+
+                    Hide()
                     questionForm.Show()
                 Else
                     adminView.Show()
