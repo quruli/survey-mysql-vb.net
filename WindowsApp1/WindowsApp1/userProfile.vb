@@ -32,6 +32,8 @@ Public Class userProfile
         'convert string to int for query
         getId = Convert.ToInt32(userIdTextBox.Text)
 
+        'needs multiple condition to avoid erasing data in the table
+        'for fixing
         cmd = New MySqlCommand("UPDATE 
                                     `survey`.`user` 
                                 SET 
@@ -45,7 +47,6 @@ Public Class userProfile
 
         If cmd.ExecuteNonQuery = 1 Then
             MessageBox.Show("Update successful")
-            Hide()
         Else
             MessageBox.Show("Try again")
         End If
