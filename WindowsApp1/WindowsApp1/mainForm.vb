@@ -31,7 +31,7 @@ Public Class mainForm
                 getId = read.GetString("iduser")
             End While
 
-            'check roles
+            'check roles/authentication
             If count = 1 Then
                 If userRole = "user" Then
                     questionForm.Show()

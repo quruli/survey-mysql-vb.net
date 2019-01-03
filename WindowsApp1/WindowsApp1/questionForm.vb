@@ -6,6 +6,7 @@ Public Class questionForm
     Dim query As String
     Dim connString As String
     Dim read As MySqlDataReader
+
     Public Property SurveyId As Integer
     Public Property UserId As Integer
 
@@ -17,9 +18,9 @@ Public Class questionForm
 
         query = "select * from survey.survey"
 
-
-
+        'displays list of surveys
         Try
+            MessageBox.Show(UserId)
             cmd = New MySqlCommand(query, conn)
             read = cmd.ExecuteReader()
             surveyListBox.Items.Clear()
@@ -44,6 +45,7 @@ Public Class questionForm
 
         query = "select * from survey.survey where title='" & surveyListBox.Text & "'"
 
+        'display description accdg to selected index
         Try
             cmd = New MySqlCommand(query, conn)
             read = cmd.ExecuteReader()
@@ -57,6 +59,10 @@ Public Class questionForm
         Catch ex As Exception
 
         End Try
+
+    End Sub
+
+    Private Sub getUserId()
 
     End Sub
 
