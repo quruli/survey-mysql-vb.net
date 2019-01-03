@@ -7,6 +7,7 @@ Public Class questionForm
     Dim connString As String
     Dim read As MySqlDataReader
 
+    'get necessary IDs
     Dim getSurveyId As Integer
     Dim getUserId As Integer
     Dim setOptionId As Integer
@@ -27,7 +28,6 @@ Public Class questionForm
             cmd = New MySqlCommand(query, conn)
             read = cmd.ExecuteReader()
             surveyListBox.Items.Clear()
-
 
             While (read.Read())
                 surveyListBox.Items.Add(read.GetString("title"))
@@ -92,19 +92,24 @@ Public Class questionForm
         conn.ConnectionString = connString
         conn.Open()
 
-        query = "INSERT INTO 
+        'check if item is selected
+        If surveyListBox.Text = "" Then
+            MessageBox.Show("Please select a survey.")
+        Else
+            query = "INSERT INTO 
                     `survey`.`responses` (`user_iduser`, `survey_idsurvey`, `options_idoptions`) 
                 VALUES (@userid, @surveyid, @optionid);"
 
-        cmd = New MySqlCommand(query, conn)
-        cmd.Parameters.Add("@userid", MySqlDbType.Int32).Value = getUserId
-        cmd.Parameters.Add("@surveyid", MySqlDbType.Int32).Value = getSurveyId
-        cmd.Parameters.Add("@optionid", MySqlDbType.Int32).Value = setOptionId
+            cmd = New MySqlCommand(query, conn)
+            cmd.Parameters.Add("@userid", MySqlDbType.Int32).Value = getUserId
+            cmd.Parameters.Add("@surveyid", MySqlDbType.Int32).Value = getSurveyId
+            cmd.Parameters.Add("@optionid", MySqlDbType.Int32).Value = setOptionId
 
-        If cmd.ExecuteNonQuery = 1 Then
-            MessageBox.Show("Answer saved")
+            If cmd.ExecuteNonQuery = 1 Then
+                MessageBox.Show("Answer saved")
+            End If
+
         End If
-
     End Sub
 
     Private Sub noBtn_Click(sender As Object, e As EventArgs) Handles noBtn.Click
@@ -116,18 +121,22 @@ Public Class questionForm
         conn.ConnectionString = connString
         conn.Open()
 
-        query = "INSERT INTO 
+        'check if item is selected
+        If surveyListBox.Text = "" Then
+            MessageBox.Show("Please select a survey.")
+        Else
+            query = "INSERT INTO 
                     `survey`.`responses` (`user_iduser`, `survey_idsurvey`, `options_idoptions`) 
                 VALUES (@userid, @surveyid, @optionid);"
 
-        cmd = New MySqlCommand(query, conn)
-        cmd.Parameters.Add("@userid", MySqlDbType.Int32).Value = getUserId
-        cmd.Parameters.Add("@surveyid", MySqlDbType.Int32).Value = getSurveyId
-        cmd.Parameters.Add("@optionid", MySqlDbType.Int32).Value = setOptionId
+            cmd = New MySqlCommand(query, conn)
+            cmd.Parameters.Add("@userid", MySqlDbType.Int32).Value = getUserId
+            cmd.Parameters.Add("@surveyid", MySqlDbType.Int32).Value = getSurveyId
+            cmd.Parameters.Add("@optionid", MySqlDbType.Int32).Value = setOptionId
 
-        If cmd.ExecuteNonQuery = 1 Then
-            MessageBox.Show("Answer saved")
+            If cmd.ExecuteNonQuery = 1 Then
+                MessageBox.Show("Answer saved")
+            End If
         End If
-
     End Sub
 End Class

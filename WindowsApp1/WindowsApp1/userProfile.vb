@@ -14,10 +14,28 @@ Public Class userProfile
     End Sub
 
     Private Sub userProfile_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim read As MySqlDataReader
+        'convert string to int for query
+        getId = Convert.ToInt32(userIdTextBox.Text)
+
         conn = New MySqlConnection
         conn.ConnectionString = "server=localhost;userid=root;password=;database=survey"
         conn.Open()
 
+        'set necessary info accdg to getId
+        Dim query As String
+
+        query = "select * from user where iduser=@id"
+        cmd = New MySqlCommand(query, conn)
+        cmd.Parameters.Add("@id", MySqlDbType.Int32).Value = getId
+        read = cmd.ExecuteReader
+        While read.Read()
+            userNameTextBox.Text = read.GetString("username")
+            firstNameTextBox.Text = read.GetString("first_name")
+            lastNameTextBox.Text = read.GetString("last_name")
+            passwordTextBox.Text = read.GetString("password")
+        End While
+        read.Close()
 
 
     End Sub
@@ -34,6 +52,7 @@ Public Class userProfile
 
         'needs multiple condition to avoid erasing data in the table
         'for fixing
+
         cmd = New MySqlCommand("UPDATE 
                                     `survey`.`user` 
                                 SET 
