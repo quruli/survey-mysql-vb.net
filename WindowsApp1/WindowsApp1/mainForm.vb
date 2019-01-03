@@ -38,6 +38,8 @@ Public Class mainForm
                 Else
                     adminView.Show()
                 End If
+            Else
+                MessageBox.Show("Incorrect username/password.")
             End If
 
             Dim form As New questionForm
