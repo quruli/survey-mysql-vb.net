@@ -18,9 +18,6 @@ Public Class userProfile
         conn.ConnectionString = "server=localhost;userid=root;password=;database=survey"
         conn.Open()
 
-        'cast string to int for query
-        getId = Convert.ToInt32(userIdTextBox.Text)
-
 
 
     End Sub
@@ -28,5 +25,29 @@ Public Class userProfile
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
         questionForm.Show()
         Hide()
+    End Sub
+
+    Private Sub updateBtn_Click(sender As Object, e As EventArgs) Handles updateBtn.Click
+
+        'convert string to int for query
+        getId = Convert.ToInt32(userIdTextBox.Text)
+
+        cmd = New MySqlCommand("UPDATE 
+                                    `survey`.`user` 
+                                SET 
+                                    `first_name`=@first, `last_name`=@last, `password`=@pw 
+                                WHERE 
+                                    `iduser`=@id;", conn)
+        cmd.Parameters.Add("@first", MySqlDbType.VarChar).Value = firstNameTextBox.Text
+        cmd.Parameters.Add("@last", MySqlDbType.VarChar).Value = lastNameTextBox.Text
+        cmd.Parameters.Add("@pw", MySqlDbType.VarChar).Value = passwordTextBox.Text
+        cmd.Parameters.Add("@id", MySqlDbType.Int32).Value = getId
+
+        If cmd.ExecuteNonQuery = 1 Then
+            MessageBox.Show("Update successful")
+            Hide()
+        Else
+            MessageBox.Show("Try again")
+        End If
     End Sub
 End Class
