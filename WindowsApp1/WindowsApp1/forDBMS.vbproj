@@ -75,6 +75,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addSurvey.Designer.vb">
+      <DependentUpon>addSurvey.vb</DependentUpon>
+    </Compile>
+    <Compile Include="addSurvey.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="adminSurveyView.Designer.vb">
       <DependentUpon>adminSurveyView.vb</DependentUpon>
     </Compile>
@@ -142,6 +148,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="addSurvey.resx">
+      <DependentUpon>addSurvey.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="adminSurveyView.resx">
       <DependentUpon>adminSurveyView.vb</DependentUpon>
     </EmbeddedResource>
